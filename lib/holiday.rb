@@ -65,7 +65,9 @@ def all_supplies_in_holidays(holiday_hash)
       supplies = supply_array.join(", ")
       result_string << "#{holiday_name}: #{supplies}\n"
     end 
-  end 
+  end
+  puts result_string
+  result_string
 end
 
 def all_holidays_with_bbq(holiday_hash)
