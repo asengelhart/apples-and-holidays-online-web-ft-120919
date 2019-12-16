@@ -72,8 +72,9 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   result = []
   holiday_hash.each do |season, inner_hash|
-    
+    inner_hash.inject(result){|memo, (holiday, supplies)| memo.push(holiday) if supplies.include?("BBQ")}
   end 
+  result
 end
 
 
